@@ -37,6 +37,7 @@ class Node {
 
     swapWithParent() {
         let container;
+
         if (this.parent === null) {
             return;
         }
@@ -71,6 +72,7 @@ class Node {
                 this.right = this.parent;
                 this.parent.right = container;
             }
+
             if (this.parent.parent) {
                 if (this.parent === this.parent.parent.left) {
                     this.parent.parent.left = this;
